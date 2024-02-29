@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>new_rpc</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>httpClient_rpc</module>
+        <module>MyRpc00</module>
+        <module>MyRpc00/RpcServer</module>
+        <module>MyRpc00/RpcClient</module>
+        <module>MyRpc01</module>
+        <module>MyRpc02</module>
+        <module>MyRpc02/Server02</module>
+        <module>MyRpc02/Client02</module>
+        <module>MyRpc03</module>
+        <module>MyRpc04</module>
+        <module>MyRpc04/Client04</module>
+        <module>MyRpc04/Server04</module>
+        <module>MyRpc05</module>
+        <module>MyRpc05/Client05</module>
+        <module>MyRpc05/Server05</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+</project>
