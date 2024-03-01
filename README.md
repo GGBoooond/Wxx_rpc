@@ -180,19 +180,24 @@
 
 
 
-更多功能待拓展中...
+# 后续框架优化的思考
 
 **1.容错机制 如果服务调用失败，消费者应该如何处理呢**
 
 为保证分布式系统的高可用，我们通常会给服务的调用增加一定的容错机制，如失败重试，降级调用其它接口等
 ![image.png](https://cdn.nlark.com/yuque/0/2024/png/42457196/1709197169719-c587d17b-c221-4709-8ab5-6f8e72e05d2e.png#averageHue=%23fdfdfd&clientId=ua5674b0c-aad3-4&from=paste&height=399&id=uc5e34f82&originHeight=599&originWidth=974&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=27455&status=done&style=none&taskId=ud7950e98-d26b-4296-bddf-cb57ed32f6c&title=&width=649.3333333333334)
 
+
+
 **2.服务提供者下线了怎么办？**  
 需要一个失效节点剔除机制
 
 
+
 **3.消费者每次都要从注册中心中拉取信息，性能会不会很差？**
-可以用缓存来优化性能
+可以在客户端建立缓存来优化性能
+
+
 
 **4.如何让整个框架更利于拓展？**
 如使用Java的SPI机制，配置化等等
