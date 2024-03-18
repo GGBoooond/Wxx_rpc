@@ -21,7 +21,7 @@ public class guavaRetry {
         Retryer<RpcResponse> retryer = RetryerBuilder.<RpcResponse>newBuilder()
                 //无论出现什么异常，都进行重试
                 .retryIfException()
-                //返回结果为 error时，进行重试
+                //返回结果为 error时进行重试
                 .retryIfResult(response -> Objects.equals(response.getCode(), 500))
                 //重试等待策略：等待 2s 后再进行重试
                 .withWaitStrategy(WaitStrategies.fixedWait(2, TimeUnit.SECONDS))
