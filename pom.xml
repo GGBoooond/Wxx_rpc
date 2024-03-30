@@ -24,6 +24,8 @@
         <module>MyRpc05</module>
         <module>MyRpc05/Client05</module>
         <module>MyRpc05/Server05</module>
+        <module>MyRpc06</module>
+        <module>MyRpc07</module>
     </modules>
 
     <properties>
