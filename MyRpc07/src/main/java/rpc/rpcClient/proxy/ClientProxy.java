@@ -31,6 +31,8 @@ public class ClientProxy implements InvocationHandler {
                 .params(args).paramsTypes(method.getParameterTypes()).build();
         //数据传输
         //RpcResponse response= rpcClient.sendRequest(request);
+        //调用retry框架进行重试操作
+        //后续添加逻辑：为保持幂等性，只对白名单上的服务进行重试
         RpcResponse response=new guavaRetry().sendServiceWithRetry(request,rpcClient);
         return response.getData();
     }

@@ -2,6 +2,7 @@ package common.service.provider;
 
 
 
+import rpc.rpcServer.ratelimit.provider.RateLimitProvider;
 import serviceRegister.ServiceRegister;
 import serviceRegister.ZKServiceRegisterAndDiscoverer;
 
@@ -20,12 +21,15 @@ public class ServiceProvider {
     private String host;
     private ServiceRegister serviceRegister;
 
+    private RateLimitProvider rateLimitProvider;
+
     public ServiceProvider(String host,int port) throws InterruptedException {
         //需要传入服务端自身的网络地址
         this.host=host;
         this.port=port;
         this.interfaceProvider=new HashMap<>();
         this.serviceRegister=new ZKServiceRegisterAndDiscoverer();
+        this.rateLimitProvider=new RateLimitProvider();
     }
 
     public void provideServiceInterface(Object service){
@@ -43,5 +47,7 @@ public class ServiceProvider {
     public Object getService(String interfaceName){
         return interfaceProvider.get(interfaceName);
     }
-
+    public RateLimitProvider getRateLimitProvider(){
+        return rateLimitProvider;
+    }
 }

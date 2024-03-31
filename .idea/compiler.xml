@@ -15,12 +15,14 @@
         <module name="MyRpc00" />
         <module name="Server03" />
         <module name="MyRpc05" />
+        <module name="MyRpc06" />
         <module name="MyRpc04" />
         <module name="Client05" />
         <module name="Client04" />
         <module name="httpClient_rpc_Server" />
         <module name="Client03" />
         <module name="Client02" />
+        <module name="MyRpc07" />
         <module name="RpcServer" />
         <module name="httpClient_rpc_Client" />
         <module name="Client" />
